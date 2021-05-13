@@ -1,13 +1,13 @@
 # maiia-checker
 
 Un script _quick and dirty_ pour automatiquement vérifier si un créneau de
-vaccination est disponible aujourd'hui ou demain sur des centres de vaccination
+vaccination est disponible aujourd'hui ou demain dans des centres de vaccination
 gérés par [Maiia](https://www.maiia.com).
 
 ## Installation
 
 ```
-git clone https://github.com/dpobel/maiia-checker
+git clone git@github.com:dpobel/maiia-checker.git
 npm i
 ```
 
@@ -22,6 +22,10 @@ npm start https://www.maiia.com/centre-de-vaccination/01500-amberieu-en-bugey/ce
 
 Si un créneau se libère dans la journée ou le lendemain, le script émet un bip
 et ouvre automatiquement l'URL du centre en question.
+
+Les vérifications sont effectuées toutes les minutes. Le script ne s'arrête
+jamais de lui-même sauf en cas d'erreur. Pour l'arrêter manuellement, il suffit
+de faire Ctrl-C ou de fermer le terminal dans lequel il est lancé.
 
 ## Licence
 
